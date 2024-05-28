@@ -86,7 +86,7 @@ const QuizComponent = () => {
   };
 
   return (
-    <div>
+    <div className="py-4">
       <div
         className={` rounded-md text-black h-[350px] w-[300px] px-4 py-6 ${
           isWrongAnswerBackgroundActive && !endScreenIsActive
