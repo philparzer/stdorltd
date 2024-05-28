@@ -57,7 +57,7 @@ const QuizComponent = () => {
   const handleAnswer = (isLTD: boolean) => {
     const correctAnswer = questions[questionIndex].country ? true : false; //LTDS have a country property
 
-    console.log(questionIndex)
+    console.log(questionIndex);
 
     if (isLTD === correctAnswer) {
       setIsCorrectAnswerBackgroundActive(true);
@@ -67,12 +67,10 @@ const QuizComponent = () => {
       setCurrentScore(currentScore - 1);
     }
 
-    
-
-    if (questionIndex < questions.length - 1) {
+    if (questionIndex < questions.length) {
       setQuestionIndex(questionIndex + 1);
     } else {
-      setEndScreenIsActive(true)
+      setEndScreenIsActive(true);
     }
   };
 
@@ -100,10 +98,12 @@ const QuizComponent = () => {
           <div className="flex flex-col justify-between h-full">
             <div className="flex justify-center">
               <div className="pt-2 grid grid-cols-3 justify-center">
-                <div>{isCorrectAnswerBackgroundActive ||
-                isWrongAnswerBackgroundActive && questionIndex > 0
-                  ? questionIndex
-                  : questionIndex + 1}</div>
+                <div>
+                  {isCorrectAnswerBackgroundActive ||
+                  (isWrongAnswerBackgroundActive && questionIndex > 0)
+                    ? questionIndex
+                    : questionIndex + 1}
+                </div>
                 <div>/</div>
                 <div>{NUMBER_OF_QUESTIONS}</div>
               </div>
@@ -111,7 +111,7 @@ const QuizComponent = () => {
             <div>
               <div className="text-4xl px-10 font-bold">
                 {isCorrectAnswerBackgroundActive ||
-                isWrongAnswerBackgroundActive && questionIndex > 0
+                (isWrongAnswerBackgroundActive && questionIndex > 0)
                   ? questions[questionIndex - 1].abbreviation
                   : questions[questionIndex].abbreviation}
               </div>
@@ -165,11 +165,17 @@ const QuizComponent = () => {
                   <button
                     className="rounded-md  bg-white border-2 border-black px-4 py-2"
                     onClick={() => {
-                      setIsCorrectAnswerBackgroundActive(false);
-                      setIsWrongAnswerBackgroundActive(false);
+                      if (questionIndex === questions.length) {
+                        setEndScreenIsActive(true);
+                      } else {
+                        setIsCorrectAnswerBackgroundActive(false);
+                        setIsWrongAnswerBackgroundActive(false);
+                      }
                     }}
                   >
-                    Next
+                    {questionIndex === questions.length
+                      ? "Show Results"
+                      : "Next"}
                   </button>
                 )}
               </div>
@@ -180,7 +186,9 @@ const QuizComponent = () => {
             Your score
             <div className="text-5xl font-bold">{currentScore}</div>
             <p className="font-bold">
-              {currentScore === 10  ? "Nailed it!" : currentScore > 5
+              {currentScore === 10
+                ? "Nailed it!"
+                : currentScore > 5
                 ? "Well done!"
                 : currentScore > 0
                 ? "You can do better than that!"
@@ -205,9 +213,7 @@ const QuizComponent = () => {
             : "text-black"
         }`}
       >
-        {!endScreenIsActive  ? (
-          <div>Current Score: {currentScore}</div>
-        ) : null}
+        {!endScreenIsActive ? <div>Current Score: {currentScore}</div> : null}
       </div>
     </div>
   );
