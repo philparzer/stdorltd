@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex py-[10dvh] px-2 items-center justify-center min-h-[100dvh] flex-col text-center">
+    <main className="flex py-[10dvh] px-2 items-center relative justify-center min-h-[100dvh] flex-col text-center">
       <h1 className="text-4xl font-bold flex items-center gap-3">
         <span className="inline-block relative w-10 h-10">
           <Image
@@ -29,6 +29,13 @@ export default function Home() {
         </p>
       </div>
       <Quiz />
+      <a
+        className="text-xs absolute underline bottom-2 left-0 w-full justify-center flex"
+        target="_blank"
+        href="https://github.com/philparzer/stdorltd"
+      >
+        contribute
+      </a>
     </main>
   );
 }
