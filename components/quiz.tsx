@@ -89,9 +89,9 @@ const QuizComponent = () => {
     <div>
       <div
         className={` rounded-md text-black h-[350px] w-[300px] px-4 py-6 ${
-          isWrongAnswerBackgroundActive
+          isWrongAnswerBackgroundActive && !endScreenIsActive
             ? "bg-red-100"
-            : isCorrectAnswerBackgroundActive
+            : isCorrectAnswerBackgroundActive && !endScreenIsActive
             ? "bg-green-100"
             : "bg-white"
         }`}
@@ -100,7 +100,10 @@ const QuizComponent = () => {
           <div className="flex flex-col justify-between h-full">
             <div className="flex justify-center">
               <div className="pt-2 grid grid-cols-3 justify-center">
-                <div>{questionIndex + 1}</div>
+                <div>{isCorrectAnswerBackgroundActive ||
+                isWrongAnswerBackgroundActive && questionIndex > 0
+                  ? questionIndex
+                  : questionIndex + 1}</div>
                 <div>/</div>
                 <div>{NUMBER_OF_QUESTIONS}</div>
               </div>
@@ -113,7 +116,7 @@ const QuizComponent = () => {
                   : questions[questionIndex].abbreviation}
               </div>
               <div
-                className={`min-h-[100px] px-2 flex flex-col gap-2 font-medium ${
+                className={`min-h-[100px] px-2 pt-2 flex flex-col gap-2 font-medium ${
                   isWrongAnswerBackgroundActive
                     ? "text-red-500"
                     : isCorrectAnswerBackgroundActive
@@ -176,12 +179,12 @@ const QuizComponent = () => {
           <div className=" justify-between flex flex-col h-full">
             Your score
             <div className="text-5xl font-bold">{currentScore}</div>
-            <p>
-              {currentScore > 0
+            <p className="font-bold">
+              {currentScore === 10  ? "Nailed it!" : currentScore > 5
                 ? "Well done!"
-                : currentScore === 0
-                ? "Better luck next time!"
-                : "You can do better!"}
+                : currentScore > 0
+                ? "You can do better than that!"
+                : "Pretty bad"}
             </p>
             <button
               className="rounded-md  bg-white border-2 border-black px-4 py-2"

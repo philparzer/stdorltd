@@ -2,7 +2,7 @@ import { LTD, MedicalCondition } from "@/utils/types";
 
 export const LTDS: LTD[] = [
   {
-    abbreviation: "SRL",
+    abbreviation: "S.r.l",
     fullName: "Société à responsabilité limitée",
     country: "Belgium",
   },
@@ -12,23 +12,28 @@ export const LTDS: LTD[] = [
     country: "Belgium",
   },
   {
-    abbreviation: "DOO",
+    abbreviation: "d.o.o.",
     fullName: "Дружество с ограничена отговорност",
     country: "Bulgaria",
   },
   {
-    abbreviation: "SRO",
+    abbreviation: "s.r.o",
     fullName: "Společnost s ručením omezeným",
     country: "Czechia",
   },
   {
-    abbreviation: "APS",
+    abbreviation: "ApS",
     fullName: "Anpartsselskab",
     country: "Denmark",
   },
   {
     abbreviation: "OY",
     fullName: "Osakeyhtiö",
+    country: "Finland",
+  },
+  {
+    abbreviation: "Ky",
+    fullName: "Kommandiittiyhtiö",
     country: "Finland",
   },
   {
@@ -42,7 +47,7 @@ export const LTDS: LTD[] = [
     country: "Germany",
   },
   {
-    abbreviation: "KGAA",
+    abbreviation: "KGaA",
     fullName: "Kommanditgesellschaft auf Aktien",
     country: "Germany",
   },
@@ -52,7 +57,7 @@ export const LTDS: LTD[] = [
     country: "Greece",
   },
   {
-    abbreviation: "ZRT",
+    abbreviation: "Zrt.",
     fullName: "Zártkörűen működő részvénytársaság",
     country: "Hungary",
   },
@@ -98,7 +103,7 @@ export const LTDS: LTD[] = [
     country: "Romania",
   },
   {
-    abbreviation: "AS",
+    abbreviation: "A.S.",
     fullName: "akciová spoločnosť",
     country: "Slovakia",
   },
@@ -106,20 +111,26 @@ export const LTDS: LTD[] = [
     abbreviation: "LLP",
     fullName: "Limited Liability Partnership",
     country: "United Kingdom",
+  },
+  {
+    abbreviation: "F.M.B.A.",
+    fullName: "Forening Med Begrænset Ansvar",
+    country: "Denmark",
+  },
+  {
+    abbreviation: "k.s.",
+    fullName: "komanditní společnost",
+    country: "Czechia",
   }
 ];
 
 export const MEDICAL_CONDITIONS: MedicalCondition[] = [
   {
-    abbreviation: "HIV",
-    fullName: "Human Immunodeficiency Virus",
-  },
-  {
-    abbreviation: "MPC",
+    abbreviation: "M.p.c",
     fullName: "Mucopurulent Cervicitis",
   },
   {
-    abbreviation: "NGU",
+    abbreviation: "ngu",
     fullName: "Non-Gonococcal Urethritis",
   },
   {
@@ -131,27 +142,27 @@ export const MEDICAL_CONDITIONS: MedicalCondition[] = [
     fullName: "Hepatitis A Virus",
   },
   {
-    abbreviation: "LGV",
+    abbreviation: "lgV",
     fullName: "Lymphogranuloma Venereum",
   },
   {
-    abbreviation: "VVC",
-    fullName: "Vulvovaginal Candidiasis",
+    abbreviation: "v.v.c.",
+    fullName: "Vulvovaginal Candidiasis"
   },
   {
     abbreviation: "PID",
     fullName: "Pelvic Inflammatory Disease",
   },
   {
-    abbreviation: "MCV",
+    abbreviation: "MCv",
     fullName: "Molluscum Contagiosum Virus",
   },
   {
-    abbreviation: "CAD",
+    abbreviation: "CAd",
     fullName: "Coronary Artery Disease",
   },
   {
-    abbreviation: "COPD",
+    abbreviation: "Co.p.d",
     fullName: "Chronic Obstructive Pulmonary Disease",
   },
   {
@@ -175,15 +186,15 @@ export const MEDICAL_CONDITIONS: MedicalCondition[] = [
     fullName: "Chronic Myeloid Leukemia",
   },
   {
-    abbreviation: "MRSA",
+    abbreviation: "MRsa",
     fullName: "Methicillin-resistant Staphylococcus aureus",
   },
   {
-    abbreviation: "PID",
+    abbreviation: "P.I.D.",
     fullName: "Pelvic Inflammatory Disease",
   },
   {
-    abbreviation: "IBS",
+    abbreviation: "IbS",
     fullName: "Irritable Bowel Syndrome",
   },
 
@@ -192,11 +203,11 @@ export const MEDICAL_CONDITIONS: MedicalCondition[] = [
     fullName: "Respiratory Syncytial Virus",
   },
   {
-    abbreviation: "HCV",
+    abbreviation: "H.Cv",
     fullName: "Hepatitis C Virus",
   },
   {
-    abbreviation: "CF",
+    abbreviation: "Cf",
     fullName: "Cystic Fibrosis",
   },
   {
@@ -208,11 +219,11 @@ export const MEDICAL_CONDITIONS: MedicalCondition[] = [
     fullName: "Traumatic Brain Injury",
   },
   {
-    abbreviation: "SARS",
+    abbreviation: "Sar.s",
     fullName: "Severe Acute Respiratory Syndrome",
   },
   {
-    abbreviation: "MERS",
+    abbreviation: "m.e.r.s.",
     fullName: "Middle East Respiratory Syndrome",
   },
 ];
