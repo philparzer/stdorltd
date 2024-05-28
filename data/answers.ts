@@ -80,9 +80,33 @@ export const LTDS: LTD[] = [
     abbreviation: "BNT",
     fullName: "Bendrovė su nuosavybės teise",
     country: "Lithuania",
+  },
+  {
+    abbreviation: "SCA",
+    fullName: "Société en commandite par actions",
+    country: "Luxembourg",
+  },
+
+  {
+    abbreviation: "NV",
+    fullName: "Naamloze vennootschap",
+    country: "Netherlands",
+  },
+  {
+    abbreviation: "SCA",
+    fullName: "Societate în comandită pe acțiuni",
+    country: "Romania",
+  },
+  {
+    abbreviation: "AS",
+    fullName: "akciová spoločnosť",
+    country: "Slovakia",
+  },
+  {
+    abbreviation: "LLP",
+    fullName: "Limited Liability Partnership",
+    country: "United Kingdom",
   }
-
-
 ];
 
 export const MEDICAL_CONDITIONS: MedicalCondition[] = [
@@ -168,24 +192,8 @@ export const MEDICAL_CONDITIONS: MedicalCondition[] = [
     fullName: "Respiratory Syncytial Virus",
   },
   {
-    abbreviation: "HPV",
-    fullName: "Human Papillomavirus",
-  },
-  {
     abbreviation: "HCV",
     fullName: "Hepatitis C Virus",
-  },
-  {
-    abbreviation: "HBV",
-    fullName: "Hepatitis B Virus",
-  },
-  {
-    abbreviation: "HDV",
-    fullName: "Hepatitis D Virus",
-  },
-  {
-    abbreviation: "HGV",
-    fullName: "Hepatitis G Virus",
   },
   {
     abbreviation: "CF",
